@@ -5,10 +5,10 @@
 
     class Configuration extends DataModel
     {
-        public string $clientId;
-        public string $clientSecret;
+        public ?string $clientId;
+        public ?string $clientSecret;
 
-        public string $accessToken;
+        public ?string $accessToken;
 
         public array $httpClientOptions = [];
     }
