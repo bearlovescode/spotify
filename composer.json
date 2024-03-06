@@ -1,0 +1,27 @@
+{
+    "name": "bearlovescode/spotify",
+    "description": "Client library for Spotify APIs",
+    "type": "library",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/bearlovescode/datamodels.git"
+        }
+    ],
+    "require": {
+        "bearlovescode/datamodels": "^1.1",
+        "guzzlehttp/guzzle": "^7.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bearlovescode\\Spotify\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nic Barr",
+            "email": "code@bearlovescode.com"
+        }
+    ]
+
+}
