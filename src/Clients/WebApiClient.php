@@ -34,7 +34,7 @@
          */
         public function artist(string $id): Artist
         {
-            $uri = new Uri(sprintf('v1/artist/%s', $id));
+            $uri = new Uri(sprintf('v1/artists/%s', $id));
             $res = $this->client->request('GET', $uri);
 
             $data = json_decode($res->getBody()->getContents());
