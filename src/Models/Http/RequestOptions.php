@@ -21,7 +21,6 @@
         public function setFormData(array $data = []): self
         {
             $clone = clone $this;
-            $clone->options->form
         }
 
         public function toArray() {
