@@ -19,10 +19,8 @@
 
             $this->config->httpClientOptions = [
                 'base_uri' => 'https://api.spotify.com/',
-                [
-                    'headers' => [
-                        'Authorization' => sprintf('Bearer %s', $this->config->accessToken)
-                    ]
+                'headers' => [
+                    'Authorization' => sprintf('Bearer %s', $this->config->accessToken)
                 ]
             ];
         }
