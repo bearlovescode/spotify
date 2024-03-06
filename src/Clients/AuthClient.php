@@ -2,14 +2,10 @@
     namespace Bearlovescode\Spotify\Clients;
 
     use Bearlovescode\Spotify\Exceptions\ApiAuthErrorException;
-    use Bearlovescode\Spotify\Models\Configuration;
-    use Bearlovescode\Spotify\Models\Http\RequestOptions;
     use Bearlovescode\Spotify\Models\Tokens\AccessToken;
-    use GuzzleHttp\Client;
 
     class AuthClient extends BaseClient
     {
-
         protected function init()
         {
             $this->config->httpClientOptions = [

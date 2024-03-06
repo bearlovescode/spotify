@@ -10,7 +10,7 @@ abstract class BaseClient
     protected Client $client;
 
     public function __construct(
-        private readonly Configuration $config
+        protected readonly Configuration $config
     )
     {
         if (method_exists($this, 'init'))
