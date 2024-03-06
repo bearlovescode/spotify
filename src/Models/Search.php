@@ -1,7 +1,9 @@
 <?php
     namespace Bearlovescode\Spotify\Models;
 
-    class Search
+    use Bearlovescode\Datamodels\DataModel;
+
+    class Search extends DataModel
     {
         public ?object $tracks;
         public ?object $artists;

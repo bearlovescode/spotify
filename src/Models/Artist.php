@@ -1,7 +1,10 @@
 <?php
     namespace Bearlovescode\Spotify\Models;
 
-    class Artist {
+    use Bearlovescode\Datamodels\DataModel;
+
+    class Artist extends DataModel
+    {
 
         public string $id;
 
