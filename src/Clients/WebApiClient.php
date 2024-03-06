@@ -4,6 +4,7 @@
     use Bearlovescode\Spotify\Exceptions\ApiErrorException;
     use Bearlovescode\Spotify\Exceptions\ConfigurationException;
     use Bearlovescode\Spotify\Models\Artist;
+    use Bearlovescode\Spotify\Models\Search;
     use GuzzleHttp\Psr7\Uri;
 
     class WebApiClient extends BaseClient
@@ -42,5 +43,23 @@
                 throw new ApiErrorException($data);
 
             return new Artist($data);
+        }
+
+        public function search(string $terms, array $types = []): Search
+        {
+            $uri = new Uri('v1/search');
+            $res = $this->client->request('GET', $uri, [
+                'query' => [
+                    'q' => $terms,
+                    'type' => implode(',', $types),
+                    'market' => $this->config->market
+                ]
+            ]);
+
+            $data = json_decode($res->getBody()->getContents());
+            if (!$res->getStatusCode() === 200)
+                throw new ApiErrorException($data);
+
+            return new Search($data);
         }
     }

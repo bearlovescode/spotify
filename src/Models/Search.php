@@ -11,6 +11,5 @@
         public ?object $playlists;
         public ?object $shows;
         public ?object $episodes;
-
         public ?object $audiobooks;
     }

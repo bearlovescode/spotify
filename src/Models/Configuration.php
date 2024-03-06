@@ -11,4 +11,6 @@
         public ?string $accessToken;
 
         public array $httpClientOptions = [];
+
+        public string $market = 'US';
     }
