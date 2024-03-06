@@ -9,7 +9,7 @@
         protected function init()
         {
             $this->config->httpClientOptions = [
-                'base_url' => 'https://accounts.spotify.com/'
+                'base_uri' => 'https://accounts.spotify.com/'
             ];
         }
 
