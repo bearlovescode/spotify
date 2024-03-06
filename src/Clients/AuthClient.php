@@ -17,13 +17,11 @@
         {
             try {
                 $options = [
-                    'headers' => [
-                        'Authorization' => sprintf('Basic %s', $this->buildAuthTokenFromConfig())
-                    ],
-                    'form' => [
+                    'form_params' => [
+                        'client_id' => $this->config->clientId,
+                        'client_secret' => $this->config->clientSecret,
                         'grant_type' => 'client_credentials'
-                    ],
-                    'json' => true
+                    ]
                 ];
 
                 $res = $this->client->request('POST', 'api/token', $options);
